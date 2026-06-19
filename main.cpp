@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 // Mendefinisikan ukuran labirin
 const int BARIS = 6;
@@ -23,14 +24,14 @@ void cetakLabirin() {
     for (int i = 0; i < BARIS; i++) {
         for (int j = 0; j < KOLOM; j++) {
             if (labirin[i][j] == 9) {
-                std::cout << "* "; // Menampilkan jalur sukses dengan tanda bintang
+                cout << "* "; // Menampilkan jalur sukses dengan tanda bintang
             } else {
-                std::cout << labirin[i][j] << " ";
+                cout << labirin[i][j] << " ";
             }
         }
-        std::cout << std::endl;
+        cout << endl;
     }
-    std::cout << "-------------------\n";
+    cout << "-------------------\n";
 }
 
 // Fungsi utama Rekursif Backtracking untuk menyelesaikan labirin
@@ -75,16 +76,16 @@ bool solveMaze(int x, int y) {
 }
 
 int main() {
-    std::cout << "=== LABIRIN AWAL ===\n";
+    cout << "=== LABIRIN AWAL ===\n";
     cetakLabirin();
 
     // Memulai pencarian dari titik Start di koordinat (0, 0)
     if (solveMaze(0, 0)) {
-        std::cout << "\n=== JALUR SOLUSI DITEMUKAN ===\n";
-        std::cout << "Tanda (*) melambangkan rute menuju finish:\n\n";
+        cout << "\n=== JALUR SOLUSI DITEMUKAN ===\n";
+        cout << "Tanda (*) melambangkan rute menuju finish:\n\n";
         cetakLabirin();
     } else {
-        std::cout << "\nJalur keluar tidak ditemukan/tidak ada solusi.\n";
+        cout << "\nJalur keluar tidak ditemukan/tidak ada solusi.\n";
     }
 
     return 0;
