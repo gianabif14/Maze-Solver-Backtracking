@@ -54,6 +54,10 @@ bool solveMaze(int x, int y) {
 
     // Tandai petak saat ini sebagai jalur yang sedang dikunjungi (Nilai 9)
     labirin[x][y] = 9;
+    
+    // Tampilkan visualisasi setiap kali melangkah maju
+    cout << "Melangkah ke koordinat (" << x << ", " << y << "):\n";
+    cetakLabirin();
 
     // 4. Rekursi: Coba bergerak ke 4 arah dengan urutan prioritas: Kanan -> Bawah -> Kiri -> Atas
     
@@ -72,6 +76,11 @@ bool solveMaze(int x, int y) {
     // 5. MEKANISME BACKTRACK: Jika ke-4 arah di atas buntu (semua mengembalikan false),
     // bersihkan kembali nilai petak ini menjadi 0, lalu mundur (return false)
     labirin[x][y] = 0; 
+    
+    // Tampilkan visualisasi ketika jalan buntu dan melakukan runut balik (backtrack)
+    cout << "BUNTU! Mundur (Backtrack) dari koordinat (" << x << ", " << y << "):\n";
+    cetakLabirin();
+    
     return false;
 }
 
