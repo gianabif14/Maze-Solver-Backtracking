@@ -16,7 +16,7 @@ int labirin[BARIS][KOLOM] = {
     {1, 0, 1, 0, 1, 1},
     {1, 0, 0, 0, 1, 1},
     {1, 1, 1, 0, 0, 1},
-    {1, 1, 1, 1, 1, 1} // Petak [5][4] bernilai 2 adalah FINISH
+    {1, 1, 1, 1, 1, 1}
 };
 
 // Fungsi untuk mengoutputkan kondisi labirin ke layar
