@@ -11,12 +11,12 @@ const int KOLOM = 6;
 // 2 = Titik Finish (Target)
 // 9 = Jalur yang sedang aktif dikunjungi
 int labirin[BARIS][KOLOM] = {
-    {0, 1, 1, 1, 1, 1},
+    {0, 1, 1, 1, 2, 1},
     {0, 0, 1, 0, 0, 1},
     {1, 0, 1, 0, 1, 1},
     {1, 0, 0, 0, 1, 1},
     {1, 1, 1, 0, 0, 1},
-    {1, 1, 1, 1, 2, 1} // Petak [5][4] bernilai 2 adalah FINISH
+    {1, 1, 1, 1, 1, 1} // Petak [5][4] bernilai 2 adalah FINISH
 };
 
 // Fungsi untuk mengoutputkan kondisi labirin ke layar
